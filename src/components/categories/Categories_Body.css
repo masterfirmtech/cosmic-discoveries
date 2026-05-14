@@ -1,0 +1,126 @@
+/* MAIN BODY WRAPPER */
+.categories-main {
+  width: 100%;
+  min-height: 60vh;
+  padding: 30px 20px;
+  box-sizing: border-box;
+
+  background: transparent;
+}
+
+/* TITLE */
+.categories-main h2 {
+  text-align: center;
+  color: #38bdf8;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+/* FILTER BUTTON AREA */
+.categories-main .filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-bottom: 30px;
+}
+
+/* FILTER BUTTONS */
+.categories-main .filters button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+
+  background: #1e293b;
+  color: #e2e8f0;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  font-size: 0.95rem;
+}
+
+/* BUTTON HOVER */
+.categories-main .filters button:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+/* GRID LAYOUT */
+.categories-main .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.categories-main .card {
+  background: rgba(15, 23, 42, 0.9);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+
+  padding: 20px;
+
+  transition: 0.3s ease;
+}
+
+/* CARD HOVER */
+.categories-main .card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(56, 189, 248, 0.4);
+
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+}
+
+/* CARD TITLE */
+.categories-main .card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* CARD TEXT */
+.categories-main .card p {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+/* CARD TYPE */
+.categories-main .card span {
+  display: inline-block;
+
+  padding: 5px 10px;
+  border-radius: 20px;
+
+  background: rgba(56, 189, 248, 0.12);
+  color: #7dd3fc;
+
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .categories-main {
+    padding: 20px 15px;
+  }
+
+  .categories-main h2 {
+    font-size: 1.6rem;
+  }
+
+  .categories-main .filters {
+    flex-direction: column;
+  }
+
+  .categories-main .filters button {
+    width: 100%;
+  }
+}
