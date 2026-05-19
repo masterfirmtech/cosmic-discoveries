@@ -1,27 +1,46 @@
 function Videos() {
+
+  const videos = [
+    {
+      id: "21X5lGlDOfg",
+      title: "NASA Live Stream"
+    },
+
+    {
+      id: "HCDVN7DCzYE",
+      title: "Journey Through Space"
+    }
+  ];
+
   return (
-    <div className="explore-page"  style={styles.container}>
-      <h1>Space Videos</h1>
+    <div style={styles.container}>
 
-      <div style={styles.card}>
-        <iframe
-          width="100%"
-          height="200"
-          src="https://www.youtube.com/embed/libKVRa01L8"
-          title="Space Video"
-          allowFullScreen
-        ></iframe>
-      </div >
+      <h1 style={styles.header}>Space Videos</h1>
 
-      <div  style={styles.card}>
-        <iframe
-          width="100%"
-          height="200"
-          src="https://www.youtube.com/embed/0qo78R_yYFA"
-          title="Space Video"
-          allowFullScreen
-        ></iframe>
+      <div style={styles.videoContainer}>
+
+        {videos.map((video, index) => (
+
+          <div key={index} style={styles.card}>
+
+            <iframe
+              width="100%"
+              height="200"
+              src={`https://www.youtube.com/embed/${video.id}`}
+              title={video.title}
+              allowFullScreen
+            ></iframe>
+
+            <p style={styles.title}>
+              {video.title}
+            </p>
+
+          </div>
+
+        ))}
+
       </div>
+
     </div>
   );
 }
@@ -29,15 +48,38 @@ function Videos() {
 export default Videos;
 
 const styles = {
+
   container: {
     padding: "20px",
-    textAlign: "center"
+    textAlign: "center",
+    backgroundColor: "#e2e8f0",
+    minHeight: "100vh"
   },
+
+  header: {
+    marginBottom: "20px",
+    color: "#0f172a"
+  },
+
+  videoContainer: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: "20px"
+  },
+
   card: {
-    margin: "15px auto",
-    width: "300px",
-    borderRadius: "10px",
+    width: "320px",
+    borderRadius: "12px",
     overflow: "hidden",
-    boxShadow: "0 4px 10px rgba(0,0,0,0.3)"
+    boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
+    background: "#0f172a",
+    paddingBottom: "10px"
+  },
+
+  title: {
+    color: "white",
+    fontSize: "14px",
+    marginTop: "8px"
   }
 };

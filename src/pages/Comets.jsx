@@ -1,28 +1,47 @@
+import Card from "../components/Card";
+
 function Comets() {
+
   const comets = [
     {
-      name: "Halley’s Comet",
-      period: "76 years",
-      description: "One of the most famous periodic comets"
+      title: "Halley’s Comet",
+      description:
+        "One of the most famous comets, visible from Earth every 76 years.",
+      image:
+        "https://images.unsplash.com/photo-1462331940025-496dfbfc7564"
     },
+
     {
-      name: "Hale-Bopp",
-      period: "2500+ years",
-      description: "Very bright comet seen in 1997"
+      title: "Hale-Bopp",
+      description:
+        "An extremely bright comet last seen in 1997.",
+      image:
+        "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa"
+    },
+
+    {
+      title: "NEOWISE",
+      description:
+        "A recent comet visible in 2020 with a glowing tail.",
+      image:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa"
     }
   ];
 
   return (
     <div className="explore-page" style={styles.container}>
+
       <h1 style={styles.header}>Comets</h1>
 
       {comets.map((item, index) => (
-        <div key={index} style={styles.card}>
-          <h3 style={styles.title}>{item.name}</h3>
-          <p style={styles.text}>{item.description}</p>
-          <p style={styles.extra}>⏳ Period: {item.period}</p>
-        </div>
+        <Card
+          key={index}
+          title={item.title}
+          description={item.description}
+          image={item.image}
+        />
       ))}
+
     </div>
   );
 }
@@ -34,30 +53,9 @@ const styles = {
     padding: "20px",
     textAlign: "center"
   },
+
   header: {
     marginBottom: "20px",
     color: "#0f172a"
-  },
-  card: {
-    background: "#0f172a",
-    color: "white",
-    padding: "15px",
-    margin: "10px auto",
-    width: "300px",
-    borderRadius: "12px",
-    boxShadow: "0 4px 10px rgba(0,0,0,0.3)"
-  },
-  title: {
-    fontSize: "18px",
-    color: "#38bdf8"
-  },
-  text: {
-    fontSize: "14px",
-    opacity: 0.9
-  },
-  extra: {
-    marginTop: "8px",
-    fontSize: "13px",
-    opacity: 0.7
   }
 };

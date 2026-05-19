@@ -1,42 +1,45 @@
+import Card from "../components/Card";
+
 function Planets() {
   const planets = [
     {
-      name: "Mercury",
-      type: "Terrestrial",
-      description: "Closest planet to the Sun and the smallest in the solar system."
+      title: "Mercury",
+      description: "Closest planet to the Sun and the smallest in the solar system.",
+      image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa"
     },
     {
-      name: "Venus",
-      type: "Terrestrial",
-      description: "Hottest planet due to its thick toxic atmosphere."
+      title: "Venus",
+      description: "Hottest planet due to its thick toxic atmosphere.",
+      image: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564"
     },
     {
-      name: "Earth",
-      type: "Terrestrial",
-      description: "The only known planet that supports life."
+      title: "Earth",
+      description: "The only known planet that supports life.",
+      image: "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4"
     },
     {
-      name: "Mars",
-      type: "Terrestrial",
-      description: "Known as the Red Planet with signs of ancient water."
+      title: "Mars",
+      description: "Known as the Red Planet with signs of ancient water.",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa"
     },
     {
-      name: "Jupiter",
-      type: "Gas Giant",
-      description: "Largest planet in the solar system with a giant storm."
+      title: "Jupiter",
+      description: "Largest planet in the solar system with a giant storm.",
+      image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca"
     }
   ];
 
   return (
-    <div className="explore-page"  style={styles.container}>
+    <div className="explore-page" style={styles.container}>
       <h1 style={styles.header}>Planets</h1>
 
       {planets.map((planet, index) => (
-        <div key={index} style={styles.card}>
-          <h2 style={styles.title}>{planet.name}</h2>
-          <p style={styles.type}>Type: {planet.type}</p>
-          <p style={styles.text}>{planet.description}</p>
-        </div>
+        <Card
+          key={index}
+          title={planet.title}
+          description={planet.description}
+          image={planet.image}
+        />
       ))}
     </div>
   );
@@ -49,31 +52,9 @@ const styles = {
     padding: "20px",
     textAlign: "center"
   },
+
   header: {
     marginBottom: "20px",
     color: "#0f172a"
-  },
-  card: {
-    margin: "15px auto",
-    width: "320px",
-    borderRadius: "12px",
-    background: "#0f172a",
-    color: "white",
-    padding: "15px",
-    boxShadow: "0 4px 10px rgba(0,0,0,0.3)"
-  },
-  title: {
-    fontSize: "20px",
-    color: "#38bdf8",
-    marginBottom: "5px"
-  },
-  type: {
-    fontSize: "13px",
-    opacity: 0.8,
-    marginBottom: "5px"
-  },
-  text: {
-    fontSize: "14px",
-    opacity: 0.9
   }
 };
