@@ -1,16 +1,38 @@
-# React + Vite
+# 🌌 AstroLearn - Astronomy Education Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Single Page Application for learning about Astronomy built with React.
 
-Currently, two official plugins are available:
+## Team Members
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| Student ID     | Name                          | Role |
+|----------------|-------------------------------|------|
+| Student1714422 | DANIEL PREYE AKINBOWALE       | SPA Architecture & Navigation Engineer |
+| Student1718074 | FAVOUR LEESI SAAYOR          | Data & Content Logic Engineer |
+| Student1724042 | PROSPER SOLOMON IFEANYIBEMA  | UI/UX & Component Engineer |
+| Student1724210 | MARK CHIDI IGWUOKU           | Integration, APIs & Documentation Engineer |
 
-## React Compiler
+## Features Implemented by Mark Chidi (Me)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Observatories Section** with Interactive World Map
+- Geolocation API (shows user's current location)
+- Multiple observatory markers with popups
+- About Us Page
+- Contact Us Page with functional form
+- Professional Navigation & Routing
+- Responsive Dark Space Theme
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React + Vite
+- React Router DOM
+- React Leaflet (Maps)
+- Tailwind CSS (Styling)
+
+## How to Run the Project
+
+1. Clone or download the project
+2. Open terminal in the project folder
+3. Install dependencies:
+
+```bash
+npm install
