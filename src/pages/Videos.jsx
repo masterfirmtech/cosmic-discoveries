@@ -30,13 +30,25 @@ const videos = [
     title: "James Webb Space Telescope Latest Images",
     url: "https://www.youtube.com/watch?v=5p1v9v9v9vA",
     description: "Latest discoveries and infrared deep fields from JWST."
+  },
+  {
+    id: 6,
+    title: "NASA Live Stream",
+    url: "https://www.youtube.com/watch?v=21X5lGlDOfg",
+    description: "Live updates and feeds direct from NASA tracking centers."
+  },
+  {
+    id: 7,
+    title: "Journey Through Space",
+    url: "https://www.youtube.com/watch?v=HCDVN7DCzYE",
+    description: "An immersive cinematic exploration of the solar system."
   }
 ];
 
 function Videos() {
   return (
     <div className="max-w-7xl mx-auto p-6 pt-10">
-      <h1 className="text-5xl font-bold text-center mb-4">Educational Astronomy Videos</h1>
+      <h1 className="text-5xl font-bold text-center mb-4 text-white">Educational Astronomy Videos</h1>
       <p className="text-center text-gray-400 mb-12 text-xl">Watch and learn about the wonders of the universe</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left">
